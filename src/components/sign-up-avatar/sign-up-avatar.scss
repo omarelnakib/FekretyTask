@@ -1,0 +1,28 @@
+
+//styling the avatar image
+.avatar {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed color($colors,borders);
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: none;
+   
+}
+//text inside the image container
+.card-title {
+    padding-top: 20px;
+    font-size: 1.0em;
+    text-align: center;
+    font-style: bold;
+    color: color($colors,dark);
+  }
+
+//content inside ion-avatar
+.image_size{
+    margin: auto;
+    padding-top: 20px;
+    width: 40px;
+    height: 40px;
+
+}

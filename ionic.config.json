@@ -1,5 +1,7 @@
 {
   "name": "FekretyTask",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

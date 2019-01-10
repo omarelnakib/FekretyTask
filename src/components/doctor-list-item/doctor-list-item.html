@@ -1,0 +1,28 @@
+<!-- Generated template for the DoctorListComponent component -->
+<ion-item class="item" (click)="SelectDoctor(doctor)"> 
+    <ion-avatar item-left >
+      <img class="img_size" [src]="doctor.imagePath" >
+    </ion-avatar>
+
+  <ion-row>
+    <ion-col col-8>
+      <h2  ion-text class="information_size" text-wrap style="font-weight: bold">{{doctor.name}}</h2>
+    </ion-col>
+    <ion-col col-1>
+        <ion-icon class="star" name="star"></ion-icon>
+    </ion-col>
+    <ion-col col-2>
+      <div ion-text style="padding-left:4px " color="borders">{{doctor.rate}}</div>
+    </ion-col>
+  </ion-row> 
+  <ion-row>
+    <ion-col >
+      <h3  ion-text class="information_size" color="primary" style="font-style:italic;">{{doctor.speciality}}</h3></ion-col>
+  </ion-row>   
+  <ion-row>
+      <ion-col col-1>
+          <ion-icon class="pin" name="pin"></ion-icon>
+      </ion-col>
+    <ion-col col-11><h2 ion-text class="information_size" color="borders" text-wrap>{{doctor.address}}</h2></ion-col>
+  </ion-row>   
+  </ion-item>

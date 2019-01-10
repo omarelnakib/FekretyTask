@@ -1,0 +1,25 @@
+//margins between items
+.item{
+    margin:10px auto; 
+  }
+  //star rate options
+.star{
+    color: color($colors,rate);
+    font-size: 20px;
+}
+// font of doctors' details
+.information_size{
+    font-size: 15px;
+}
+// pin Location style options
+.pin{
+    
+    color: color($colors,borders);
+    font-size: 20px;
+}
+// doctor's profile picture size
+.img_size{
+    width: 65px !important;  
+    height : 65px !important; 
+ 
+}

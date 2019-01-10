@@ -1,0 +1,62 @@
+<!-- Generated template for the RegisterFormComponent component -->
+<form #RegisterForm="ngForm" novalidate >
+
+  <!-- Name with validation -->
+  <ion-item >
+    <ion-label stacked >Full Name</ion-label>
+    <ion-input type="text" placeholder="Your Full Name" name="name" [(ngModel)]="account.name" #name="ngModel"
+       required pattern="[A-Za-z0-9]{1,20}"></ion-input>
+  </ion-item>
+  <div padding *ngIf="name.invalid && name.dirty" >
+    <span ion-text class="global__input-error" color="danger">Name is not valid</span>
+ </div>
+  <!-- ------------------------------------ -->
+
+ <!-- BirthDay -->
+  <ion-item>
+    <ion-label stacked >BirthDay</ion-label>
+    <ion-input type="date" placeholder="dd/mm/yy" name="birthDay"
+        [(ngModel)]="account.birthDate">
+    </ion-input>
+  </ion-item>
+  
+  <!-- ------------------------------------ -->
+
+<!-- Email with validation -->
+  <ion-item>
+     <ion-label stacked >Email</ion-label>
+        <ion-input type="email" placeholder="Your Email" name="email"
+           [(ngModel)]="account.email"  #email="ngModel" 
+           required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        ></ion-input>
+ </ion-item>
+  <div padding *ngIf="email.invalid && email.dirty" >
+       <span ion-text class="global__input-error" color="danger">Email address is not valid</span>
+  </div>
+  <!-- ------------------------------------ -->
+
+<!-- Phone Number -->
+ <ion-item>
+   <ion-label stacked >Phone Number</ion-label>
+   <ion-input type="tel" placeholder="Your Phone Number" name="phone" [(ngModel)]="account.phoneNumber">
+   </ion-input>
+ </ion-item>
+<!-- ------------------------------------ -->
+
+<!-- Location/Address -->
+ <ion-item>
+    <ion-label stacked >Location/Address</ion-label>
+    <ion-input type="text" placeholder="Your Location" name="address" [(ngModel)]="account.address">
+    </ion-input>
+ </ion-item>
+  <!-- ------------------------------------ -->
+
+  <!-- Button -->
+ <ion-row padding-top>
+   <button ion-button block round text-capitalize style="height:50px;" 
+    (click)="next()"
+    [disabled]="RegisterForm.invalid">Next</button>     
+  </ion-row>
+  <!-- ------------------------------------ -->
+
+</form>

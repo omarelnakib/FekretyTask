@@ -1,0 +1,46 @@
+<!-- Generated template for the FeedBackComponent component -->
+<!--
+  Generated template for the FeedBackPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+    <h1 ion-text text-center style="font-size: 20px">Give Feedback</h1>
+
+    <!-- profile data -->
+    <ion-item item-center>
+      <ion-avatar padding-top item-left >
+        <img class="img_size" [src]="doctor.imagePath" >
+      </ion-avatar>
+      <h2 ion-text text-wrap >{{doctor.name}}</h2>
+      <h3 ion-text  text-wrap color="primary" style="font-style:italic;" >{{doctor.speciality}}</h3>
+    </ion-item>
+    <!-- ------------------------------------ -->
+
+    <!-- rate -->
+    <ionic3-star-rating text-center
+    activeIcon = "star"
+    defaultIcon = "star-outline"
+    activeColor = "#fbff00" 
+    defaultColor = "#cccccc"
+    readonly="false"
+    [rating]="doctor.rate">
+    </ionic3-star-rating>
+    <!-- ------------------------------------ -->
+
+    <!-- feedback -->
+    <h3  ion-text style="font-size: 20px">Feedback</h3>
+    <ion-input class="feedBack_Input" text-wrap type="text" placeholder="Write your Feedback"></ion-input>
+    <!-- ------------------------------------ -->
+
+    <!-- buttons -->
+    <ion-buttons padding-top (click)="closeFeedBack()">
+      <button ion-button color="primary" block round text-capitalize>Send</button>
+      <button ion-button clear block  color="dark" text-capitalize>No Thanks</button>
+    </ion-buttons>
+    <!-- ------------------------------------ -->
+
+</ion-content>

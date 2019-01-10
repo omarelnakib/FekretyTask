@@ -1,0 +1,19 @@
+//labels' style
+ion-label{
+    padding-top:10px!important;
+    color:color($colors,dark)!important;
+    font-weight: bold!important;
+}
+
+//add borders to all ion-inputs
+ion-input{
+    border: 2px solid color($colors,borders);
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+//removes the default bottom line in ion-input
+.item-inner, ion-item {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+  }
